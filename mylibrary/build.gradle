@@ -34,15 +34,18 @@ android {
             singleVariant('release') {
                 withSourcesJar()
             }
+
         }
-    
+
 
 
 }
 
 
     publishing {
+
         publications {
+
             release(MavenPublication) {
                 groupId = Project.getPackageName()
                 artifactId = Project.getName()
