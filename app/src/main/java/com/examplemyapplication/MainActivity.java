@@ -4,7 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-import com.example.mylibrary.MyLib;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -12,6 +12,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        MyLib.show(this,"hello");
+//        MyLib.show(this,"hello");
     }
 }

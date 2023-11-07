@@ -24,19 +24,35 @@ android {
         sourceCompatibility JavaVersion.VERSION_17
         targetCompatibility JavaVersion.VERSION_17
     }
+
+    publishing{
+
+    }
+
+
+        publishing {
+            singleVariant('release') {
+                withSourcesJar()
+            }
+        }
+    
+
+
 }
 
-publishing {
-    publications {
-        maven(MavenPublication) {
-            groupId = Project.getPackageName()
-            artifactId = Project.getName()
-            version = '1.0'
+
+    publishing {
+        publications {
+            release(MavenPublication) {
+                groupId = Project.getPackageName()
+                artifactId = Project.getName()
+                version = '1.0'
 
 
+            }
         }
     }
-}
+
 
 dependencies {
 
