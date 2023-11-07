@@ -30,24 +30,21 @@ android {
         singleVariant('release') {
             withSourcesJar()
         }
-
     }
-
-
 }
 
-
 publishing {
-
     publications {
-
         release(MavenPublication) {
             groupId = Project.getPackageName()
             artifactId = Project.getName()
             version = '1.5'
-
+            afterEvaluate {
+                from components.release
+            }
 
         }
+
     }
 }
 
